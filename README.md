@@ -1,72 +1,185 @@
-# 📚 CollegeBook Database
+# 📘 College-Book-System-Design
 
-**CollegeBook Database** is the structured **database design** of the **[CollegeBook](https://github.com/vasuchandrani/College-Book)**- ***Build Your College Story***.  
-
-Thiys project contains the schemas, relations, and queries that power the CollegeBook App, **CollegeBook** is a unique, minimal, and purpose-driven social media platform designed exclusively for college students. Unlike conventional social platforms, CollegeBook is **time-bound**—your account lasts only through your academic course duration. Once you graduate, your account is deleted and a personalized archive file (PDF/HTML) of all your activity is delivered to you as a digital **Memory Book**.
+> Designing the architecture behind **CollegeBook** — from idea to implementation.
 
 ---
 
-##  Vision
+# 📚 About CollegeBook
 
-To design and maintain a **robust, scalable, and normalized database** that supports all the features of **CollegeBook**, enabling students to collaborate, share, and grow in a distraction-free digital ecosystem.  
+### Build Your College Story.
 
----
+**CollegeBook** is a purpose-built digital campus platform designed exclusively for college students.
 
-##  Database Scope
+It is not another social media platform.
 
-The database supports the complete set of **CollegeBook features**, including:  
+CollegeBook creates a shared digital space where students can connect, express themselves, discover opportunities, collaborate on ideas, and become part of their college community.
 
-###  Campus Feed
-- Store and retrieve posts from all students in a college.
-- No follower/friend relations — **open visibility by design**.
+Students can share:
 
-###  Explore Peers
-- Cross-college post exploration via controlled queries.
-- Focused on reducing unnecessary connections while keeping visibility intact.
+- Achievements
+- Experiences
+- Campus moments
+- Events
+- Ideas
+- Opportunities
+- Projects
+- Everyday student life
 
-###  Post Features
-- Manage likes, saved posts, and shareable external links.
-- Like counts stored efficiently (no user name tracking to reduce overhead).  
+The platform is designed to help students become visible within their college ecosystem, regardless of whether they are naturally outgoing or introverted.
 
-###  Collab Hub
-- Database design for hackathon/project teams:
-  - Open team listings
-  - Join requests (with status: `Accepted`, `Rejected`, `Need Improvement`)
-  - Structured feedback mechanism
-- Auto-creation of **team groups** (private chats) only after acceptance.
+Unlike traditional social platforms, CollegeBook is **time-bound** to a student's academic journey. Every account exists only for the duration of the student's course. Upon graduation, the account is permanently closed and transformed into a personalized digital archive called the **Memory Book**, preserving the student's contributions, experiences, friendships, collaborations, achievements, and growth throughout college.
 
-###  Profile & Achievements
-- Centralized user profile schema with:
-  - Education details
-  - Saved posts
-  - Team participation history
-- **myCon Tags (Skill Badges)**:
-  - Stored with verification data (e.g., contest links, project proof).  
+CollegeBook exists to help students:
 
-###  Graduation & Digital Memory Book
-- Automatic account expiry based on course duration.
-- Export functionality to generate **PDF/HTML memory book** from stored data.
+- Connect with peers
+- Share their journey
+- Showcase skills
+- Participate in campus life
+- Discover opportunities
+- Build projects
+- Form teams
+- Create lasting memories
+
+without the distractions and pressure of conventional social media.
 
 ---
 
-##  Database Design Highlights
-- **ER Diagram** covering Users, Posts, Colleges, Teams, Requests, Chats, and myCons.
-- **Relational Schema** with normalized relations to avoid redundancy.
-- Support for **referential integrity** with foreign keys.
-- Indexes for fast retrieval of posts, profiles, and team listings.
+# 🎯 Problem Statement
+
+College campuses are filled with talented students, creative ideas, exciting events, opportunities, and potential collaborations — yet most students interact with only a small part of their college community.
+
+Many students struggle to:
+
+- Discover people with similar interests
+- Share their ideas and achievements
+- Stay connected with campus activities
+- Build visibility within their college
+- Find teammates for projects and hackathons
+- Preserve meaningful memories from their college journey
+
+This challenge is even greater for students who are naturally introverted and find it difficult to participate in offline communities despite having valuable skills, ideas, and experiences to share.
+
+Traditional social media platforms are designed for mass audiences and global engagement. As a result, local college interactions often get buried beneath entertainment-driven content, popularity metrics, and algorithmic feeds.
+
+CollegeBook aims to solve this by creating a dedicated digital campus ecosystem where students can connect, participate, collaborate, share experiences, discover opportunities, and become an active part of their college community.
 
 ---
 
-##  Why This Database is Different
-- Focuses on **purpose-driven relations** (teams, projects, achievements).
-- Time-bound accounts for natural cleanup and sentimental closure.
-- Inclusive design for introverts and underserved students.
+# 🌟 Vision
+
+To build a unified digital home for every college community where students can express themselves, share experiences, discover opportunities, build meaningful connections, collaborate on ideas, showcase their skills, and preserve the story of their college journey.
+
+CollegeBook envisions a campus environment where every student — regardless of popularity, background, or personality type — has an equal opportunity to participate, contribute, and be seen.
 
 ---
 
-## 🛠️ Current Status
+# 🏗️ About This Repository
 
-🚧 The project is actively in development, expanding with new academic-focused and student-centric features.
+This repository does **not contain application source code**.
+
+The purpose of this repository is to document and evolve the complete system architecture of CollegeBook before implementation.
+
+It serves as the single source of truth for:
+
+- Requirements
+- Database Design
+- Architecture Design
+- API Design
+- Backend Design
+- Scalability Planning
+- Security Planning
+- Technical Decisions
+
+The repository tracks how the system evolves from concept to production-ready architecture.
+
+---
+
+# 🎯 Repository Objectives
+
+The goal of this repository is to:
+
+- Design the system before writing code
+- Validate architecture decisions early
+- Document database evolution
+- Define service boundaries
+- Plan scalability strategies
+- Reduce implementation mistakes
+- Maintain technical clarity throughout development
+
+Every major design decision should be documented before implementation begins.
+
+---
+
+# 📂 Repository Structure
+
+```text
+college-book-system-design
+│
+├── README.md
+│
+├── database-design
+│
+├── high-level-design
+│
+├── low-level-design
+│
+└── decisions
+```
+
+---
+
+# 🛣️ System Design Roadmap
+
+The repository will evolve through the following phases:
+
+### Phase 1
+
+- Product Requirements
+- Entity Identification
+- Database Design
+
+### Phase 2
+
+- High-Level Architecture
+- API Planning
+- Service Boundaries
+
+### Phase 3
+
+- Low-Level Design
+- Security Design
+- Performance Planning
+
+### Phase 4
+
+- Production Readiness
+- Deployment Strategy
+- Monitoring & Observability
+
+---
+
+## Founder
+
+Built by  
+**Vatsal Chandrani**  
+
+Turning ideas into digital systems.  
+
+---
+
+# 🚧 Current Status
+
+**Architecture & System Design Phase**
+
+The platform is currently being designed and documented before implementation begins.
+
+Upcoming focus areas:
+
+- Database Modeling
+- System Architecture
+- API Design
+- Scalability Planning
+- Security Design
 
 ---
 
